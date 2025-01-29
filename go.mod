@@ -11,6 +11,6 @@ require (
 	github.com/xyproto/pinterface v1.5.4
 	github.com/xyproto/randomstring v1.2.0 // indirect
 	github.com/xyproto/simplehstore v1.8.2
-	github.com/zenazn/goji v0.9.0
+	github.com/zenazn/goji v1.0.1
 	golang.org/x/crypto v0.29.0
 )
