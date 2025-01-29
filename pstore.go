@@ -121,6 +121,10 @@ func (perm *Permissions) SetPublicPath(pathPrefixes []string) {
 	perm.publicPathPrefixes = pathPrefixes
 }
 
+func (perm *Permissions) SetRootIsPublic(isPublic bool) {
+	perm.rootIsPublic = isPublic
+}
+
 // PermissionDenied is the default "permission denied" http handler.
 func PermissionDenied(w http.ResponseWriter, req *http.Request) {
 	http.Error(w, "Permission denied.", http.StatusForbidden)
@@ -139,22 +143,14 @@ func (perm *Permissions) Rejected(w http.ResponseWriter, req *http.Request) bool
 	// Reject if it is an admin page and user does not have admin permissions
 	for _, prefix := range perm.adminPathPrefixes {
 		if strings.HasPrefix(path, prefix) {
-			if !perm.state.AdminRights(req) {
-				return true
-			} else {
-				return false
-			}
+			return !perm.state.AdminRights(req)
 		}
 	}
 
 	// Reject if it's a user page and the user does not have user rights
 	for _, prefix := range perm.userPathPrefixes {
 		if strings.HasPrefix(path, prefix) {
-			if !perm.state.UserRights(req) {
-				return true
-			} else {
-				return false
-			}
+			return !perm.state.UserRights(req)
 		}
 	}
 
