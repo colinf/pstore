@@ -141,6 +141,8 @@ func (perm *Permissions) Rejected(w http.ResponseWriter, req *http.Request) bool
 		if strings.HasPrefix(path, prefix) {
 			if !perm.state.AdminRights(req) {
 				return true
+			} else {
+				return false
 			}
 		}
 	}
@@ -150,6 +152,8 @@ func (perm *Permissions) Rejected(w http.ResponseWriter, req *http.Request) bool
 		if strings.HasPrefix(path, prefix) {
 			if !perm.state.UserRights(req) {
 				return true
+			} else {
+				return false
 			}
 		}
 	}
