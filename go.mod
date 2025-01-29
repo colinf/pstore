@@ -1,4 +1,4 @@
-module github.com/xyproto/pstore
+module github.com/colinf/pstore
 
 go 1.12
 
