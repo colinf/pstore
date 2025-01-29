@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/codegangsta/negroni"
-	"github.com/xyproto/pstore"
+	"github.com/colinf/pstore"
 )
 
 func main() {

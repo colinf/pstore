@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/colinf/pstore"
 	"github.com/xyproto/pinterface"
-	"github.com/xyproto/pstore"
 )
 
 type permissionHandler struct {

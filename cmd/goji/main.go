@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/xyproto/pstore"
+	"github.com/colinf/pstore"
 	"github.com/zenazn/goji"
 )
 

@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/colinf/pstore"
 	"github.com/go-martini/martini"
-	"github.com/xyproto/pstore"
 )
 
 func main() {
