@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/xyproto/pstore"
+	"github.com/colinf/pstore"
 	"github.com/xyproto/simplehstore"
 )
 
